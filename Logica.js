@@ -46,4 +46,51 @@ console.log("Mensaje cifrado:");
 var descifrado = cifrar(a,caracteresA_descifrar,llaveA_cifrar);
 console.log(descifrado);
 console.log("Mensaje descifrado:");
-console.log(descifrar(descifrado,llaveA_descifrar,caracteresA_descifrar));
+var descifrado2 = descifrar(descifrado,llaveA_descifrar,caracteresA_descifrar);
+console.log(descifrar(descifrado2,llaveA_descifrar,caracteresA_descifrar))
+
+const areatexto = document.getElementById('texto');
+areatexto.addEventListener("input",function(){
+	var valor = "";
+	for (var i = 0; i < this.value.length; i++) {
+		const c = this.value[i];
+		if(c !== c.toLowerCase() || c === "á" || c === "é" || c === "í" || c === "ó" || c === "ú"){
+			console.log("No se aceptan carater mayúsculos");
+		}else{
+			valor+=c;
+		}
+	}
+	this.value = valor;
+});
+
+function copiar(){
+	var copialabel = document.getElementById("textofinal");
+	copialabel.focus();
+	copialabel.select();
+	try{
+		var successful = document.execCommand('copy');
+    	var msg = successful ? 'successful' : 'unsuccessful';
+    	console.log('Copying text command was ' + msg);
+	}catch(err){
+		console.log("Algo salió mal")
+	}
+	console.log("Estoy copiando");
+}
+/*
+function validarTextoIngresado(){
+	var ta = document.getElementById('texto');
+	//console.log(ta.value);
+	ta.addEventListener(
+	    'keypress',
+	    function (e) {
+	        // Test for the key codes you want to filter out.
+	        if (e.keyCode == 60) {
+	            console.log('No "<"!');
+	            // Prevent the default event action (adding the
+	            // character to the textarea).
+	            e.preventDefault();
+	        }
+	    }
+	);
+}
+*/
