@@ -7,16 +7,18 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+	<img src="imagenes/logo.png">
 	<main>
-		<img src="imagenes/logo.png">
-		<section>
+		<section id="seccion1">
 			<textarea id="texto" placeholder="Ingrese el texto aquí"></textarea>
-			<p>Ingresar solamente letras minúsculas y sin acentos</p>
-			<button>Cifrar</button>
-			<button>Descifrar</button>
+			<p>☠️ Ingresar solamente letras minúsculas y sin acentos. ☠️</p>
+			<div id="botonescifrado">
+				<button id="botoncifrar" onclick="cifrar()">Cifrar</button>
+				<button id="botondescifrar" onclick="descifrar()">Descifrar</button>
+			</div>
 		</section>
-		<section>
-			<textarea id="textofinal" readonly="true">Hola</textarea>
+		<section id="seccion2">
+			<textarea id="textofinal" readonly="true"></textarea>
 			<button id="botoncopiar" onclick="copiar()">Copiar</button>
 		</section>
 	</main>

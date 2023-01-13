@@ -3,54 +3,48 @@ const caracteresA_descifrar = ["a","e","i","o","u"];
 //const caracteresA_cifrar = [/a/g,/e/g,/i/g,/o/g,/u/g]
 const llaveA_cifrar = ["ai","enter","imes","ober","ufat"]
 const llaveA_descifrar = [/ai/g,/enter/g,/imes/g,/ober/g,/ufat/g];
+const areatextoIngreso = document.getElementById('texto');
+const areatextoSalida = document.getElementById('textofinal');
+areatextoSalida.value= "";
 
-function cifrar(mensaje,letras,letrasEncriptadas){
+function cifrar(){
+	var mensaje = areatextoIngreso.value;
 	var mensajeCifrado = "";
 	for(carater of mensaje){
 		switch (carater){
-			case letras[0]:
-			mensajeCifrado += letrasEncriptadas[0];
+			case caracteresA_descifrar[0]:
+			mensajeCifrado += llaveA_cifrar[0];
 			break;
-			case letras[1]:
-			mensajeCifrado += letrasEncriptadas[1];
+			case caracteresA_descifrar[1]:
+			mensajeCifrado += llaveA_cifrar[1];
 			break;
-			case letras[2]:
-			mensajeCifrado += letrasEncriptadas[2];
+			case caracteresA_descifrar[2]:
+			mensajeCifrado += llaveA_cifrar[2];
 			break;
-			case letras[3]:
-			mensajeCifrado += letrasEncriptadas[3];
+			case caracteresA_descifrar[3]:
+			mensajeCifrado += llaveA_cifrar[3];
 			break;
-			case letras[4]:
-			mensajeCifrado += letrasEncriptadas[4];
+			case caracteresA_descifrar[4]:
+			mensajeCifrado += llaveA_cifrar[4];
 			break;
 			default:
 			mensajeCifrado += carater;
 		}
 	}
-	return mensajeCifrado;
+	areatextoSalida.value = mensajeCifrado;
 }
 
-function descifrar(mensaje,letrasEncriptadas,letras){
+function descifrar(letras){
 	var resultado;
-	var mensajeDescifrado= mensaje;
-	for (var i = 0; i < letras.length; i++) {
-		resultado = mensajeDescifrado.replace(letrasEncriptadas[i],letras[i]);
+	var mensajeDescifrado= areatextoIngreso.value;
+	for (var i = 0; i < caracteresA_descifrar.length; i++) {
+		resultado = mensajeDescifrado.replace(llaveA_cifrar[i],caracteresA_descifrar[i]);
 		mensajeDescifrado=resultado;
 	}
-	return mensajeDescifrado;
+	areatextoSalida.value = mensajeDescifrado;
 }
 
-console.log("Mensaje:");
-console.log(a);
-console.log("Mensaje cifrado:");
-var descifrado = cifrar(a,caracteresA_descifrar,llaveA_cifrar);
-console.log(descifrado);
-console.log("Mensaje descifrado:");
-var descifrado2 = descifrar(descifrado,llaveA_descifrar,caracteresA_descifrar);
-console.log(descifrar(descifrado2,llaveA_descifrar,caracteresA_descifrar))
-
-const areatexto = document.getElementById('texto');
-areatexto.addEventListener("input",function(){
+areatextoIngreso.addEventListener("input",function(){
 	var valor = "";
 	for (var i = 0; i < this.value.length; i++) {
 		const c = this.value[i];
@@ -93,4 +87,12 @@ function validarTextoIngresado(){
 	    }
 	);
 }
+console.log("Mensaje:");
+console.log(a);
+console.log("Mensaje cifrado:");
+var descifrado = cifrar(a,caracteresA_descifrar,llaveA_cifrar);
+console.log(descifrado);
+console.log("Mensaje descifrado:");
+var descifrado2 = descifrar(descifrado,llaveA_descifrar,caracteresA_descifrar);
+console.log(descifrar(descifrado2,llaveA_descifrar,caracteresA_descifrar))
 */
