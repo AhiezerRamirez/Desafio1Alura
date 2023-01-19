@@ -31,7 +31,11 @@ function cifrar(){
 			mensajeCifrado += carater;
 		}
 	}
+	console.log(areatextoSalida.style);
+	console.log(areatextoSalida.style.setProperty("background-image",null));
+	//console.log(areatextoSalida.style["background-image"]);
 	areatextoSalida.value = mensajeCifrado;
+	document.getElementById('botoncopiar').style.visibility = 'visible';
 }
 
 function descifrar(letras){
@@ -49,7 +53,7 @@ areatextoIngreso.addEventListener("input",function(){
 	for (var i = 0; i < this.value.length; i++) {
 		const c = this.value[i];
 		if(c !== c.toLowerCase() || c === "á" || c === "é" || c === "í" || c === "ó" || c === "ú"){
-			console.log("No se aceptan carater mayúsculos");
+			alert("No se permiten tíldes o mayúsculas.")
 		}else{
 			valor+=c;
 		}
@@ -70,6 +74,7 @@ function copiar(){
 	}
 	console.log("Estoy copiando");
 }
+
 /*
 function validarTextoIngresado(){
 	var ta = document.getElementById('texto');

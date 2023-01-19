@@ -2,6 +2,28 @@
 body{
 	background-color: #151515;
 }
+
+#mensaje-error{
+	visibility: hidden;
+	opacity: 1;
+	transition: 3s;
+	text-align: center;
+	width: 200px;
+	height: 20px;
+	padding: 0px 20px;
+	margin: 0px 90px;
+	color: #a80000;
+	border-color: #a80000;
+	border-style: solid;
+	border-radius: 10px;
+	border-width: 1px;
+	background-color: #151515;
+}
+
+#error.fead-out{
+	opacity: 0;
+}
+
 #seccion1{
 	display: inline-block;
 	vertical-align: top;
@@ -44,7 +66,7 @@ textarea:focus{
 	outline: none;
 }
 
-p{
+#aviso-mayusculas{
 	color: #039831;
 	font-size: 15px;
 	width: 80%;
@@ -88,6 +110,7 @@ p{
 }
 
 #botoncopiar{
+	visibility: hidden;
 	width: 70%;
 	height: 35px;
 	margin: 30px 15%;
@@ -95,5 +118,6 @@ p{
 	border-color: #039831;
 	border-radius: 10px;
 	color: #039831;
+
 }
 
