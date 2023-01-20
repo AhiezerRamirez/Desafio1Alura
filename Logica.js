@@ -42,7 +42,7 @@ function descifrar(letras){
 	var resultado;
 	var mensajeDescifrado= areatextoIngreso.value;
 	for (var i = 0; i < caracteresA_descifrar.length; i++) {
-		resultado = mensajeDescifrado.replace(llaveA_cifrar[i],caracteresA_descifrar[i]);
+		resultado = mensajeDescifrado.replaceAll(llaveA_cifrar[i],caracteresA_descifrar[i]);
 		mensajeDescifrado=resultado;
 	}
 	areatextoSalida.value = mensajeDescifrado;
