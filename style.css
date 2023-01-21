@@ -3,26 +3,6 @@ body{
 	background-color: #151515;
 }
 
-#mensaje-error{
-	visibility: hidden;
-	opacity: 1;
-	transition: 3s;
-	text-align: center;
-	width: 200px;
-	height: 20px;
-	padding: 0px 20px;
-	margin: 0px 90px;
-	color: #a80000;
-	border-color: #a80000;
-	border-style: solid;
-	border-radius: 10px;
-	border-width: 1px;
-	background-color: #151515;
-}
-
-#error.fead-out{
-	opacity: 0;
-}
 
 #seccion1{
 	display: inline-block;
@@ -101,7 +81,7 @@ textarea:focus{
 #textofinal{
 	background-color: #000000;
 	width: 90%;
-	height: 380px;
+	height: 76%;
 	margin: 10px 5%;
 	color: white;
 	border-style: none;
@@ -121,3 +101,30 @@ textarea:focus{
 
 }
 
+@media screen and (max-width: 700px) {
+  #seccion1 {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    display: block;
+  }
+
+  #seccion2 {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    display: block;
+    height: 200px
+  }
+}
+
+/*
+@media screen and (max-width: 700px) {
+  #seccion1 {
+    width: 100%; 
+    display: block;
+  }
+
+  #seccion2 {
+    width: 100%; 
+    display: block;
+    height: 200px
+  }
+}
+*/

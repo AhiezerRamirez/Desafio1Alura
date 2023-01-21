@@ -5,7 +5,7 @@ const llaveA_cifrar = ["ai","enter","imes","ober","ufat"]
 const llaveA_descifrar = [/ai/g,/enter/g,/imes/g,/ober/g,/ufat/g];
 const areatextoIngreso = document.getElementById('texto');
 const areatextoSalida = document.getElementById('textofinal');
-areatextoSalida.value= "";
+//areatextoSalida.value= "Ningún mensaje fue encontrado";
 
 function cifrar(){
 	var mensaje = areatextoIngreso.value;
